@@ -3,29 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Movie Website</title>
+  <title>Movies Hub</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #121212;
       color: #ffffff;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 28px;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 200px;
+      position: fixed;
+      background-color: #1c1c1c;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ffffff;
+      padding: 12px 20px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background-color: #00ccff;
+      color: #000;
+    }
+
+    .content {
+      margin-left: 220px;
       padding: 20px;
     }
-    h1 {
-      text-align: center;
-      color: #00ffcc;
+
+    .movie-section {
+      margin-bottom: 40px;
     }
+
     .movie {
       border: 1px solid #444;
       border-radius: 10px;
       padding: 15px;
-      margin: 20px auto;
-      max-width: 500px;
+      margin: 10px 0;
       background-color: #1e1e1e;
     }
-    .movie h2 {
+
+    .movie h3 {
       color: #00ffff;
     }
+
     .movie a {
       display: inline-block;
       margin-top: 10px;
@@ -35,6 +71,7 @@
       text-decoration: none;
       border-radius: 5px;
     }
+
     .movie a:hover {
       background-color: #0099cc;
     }
@@ -42,21 +79,54 @@
 </head>
 <body>
 
-  <h1>My Movie Collection</h1>
+  <header>Movies Hub</header>
 
-  <div class="movie">
-    <h2>Inception (2010)</h2>
-    <p>A thief who steals corporate secrets through dream-sharing technology.</p>
-    <a href="https://drive.google.com/your-link-here" target="_blank">Watch Now</a>
+  <div class="sidebar">
+    <a href="#new-releases">New Releases</a>
+    <a href="#popular">Popular Movies</a>
+    <a href="#bollywood">Bollywood Movies</a>
+    <a href="#hollywood">Hollywood Movies</a>
   </div>
 
-  <div class="movie">
-    <h2>Interstellar (2014)</h2>
-    <p>A team travels through a wormhole in search of a new home for humanity.</p>
-    <a href="https://youtube.com/your-link-here" target="_blank">Watch Now</a>
-  </div>
+  <div class="content">
 
-  <!-- Add more movies below -->
+    <div class="movie-section" id="new-releases">
+      <h2>🎬 New Releases</h2>
+      <div class="movie">
+        <h3>Movie A (2025)</h3>
+        <p>Description of new release movie A.</p>
+        <a href="#">Watch Now</a>
+      </div>
+    </div>
+
+    <div class="movie-section" id="popular">
+      <h2>⭐ Popular Movies</h2>
+      <div class="movie">
+        <h3>Inception (2010)</h3>
+        <p>A thief who steals corporate secrets through dream-sharing technology.</p>
+        <a href="https://drive.google.com/your-link-here" target="_blank">Watch Now</a>
+      </div>
+    </div>
+
+    <div class="movie-section" id="bollywood">
+      <h2>🇮🇳 Bollywood Movies</h2>
+      <div class="movie">
+        <h3>Dangal (2016)</h3>
+        <p>Based on the true story of wrestler Mahavir Phogat and his daughters.</p>
+        <a href="#">Watch Now</a>
+      </div>
+    </div>
+
+    <div class="movie-section" id="hollywood">
+      <h2>🇺🇸 Hollywood Movies</h2>
+      <div class="movie">
+        <h3>Interstellar (2014)</h3>
+        <p>A team travels through a wormhole in search of a new home for humanity.</p>
+        <a href="https://youtube.com/your-link-here" target="_blank">Watch Now</a>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
